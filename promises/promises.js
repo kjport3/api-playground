@@ -96,6 +96,20 @@ const posts = [
     });
     const data = await res.json();
     console.log(data);
+    const weather = data.main;
+    document.body.innerHTML = `
+    <h1>${data.name} Weather</h1>
+    <h2>Temperature:</h2>
+    ${weather.temp}<br>
+    <h2>Feels Like:</h2>
+    ${weather.feels_like}
+    <h2>Humidity</h2>
+    ${weather.humidity}%
+    <h2>Conditions</h2>
+    ${data.weather[0].description}
+    <h2>Wind</h2>
+    ${data.wind.speed} mph
+    `;
   }
   
   fetchWeather("Atlanta");
