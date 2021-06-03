@@ -70,21 +70,6 @@ const posts = [
   
   // fetchUsers();
   
-  // // fetch() weather
-  // async function fetchWeather() {
-  //     let weather = "https://community-open-weather-map.p.rapidapi.com/find?q=atlanta&cnt=0&mode=null&lon=0&type=link%2C%20accurate&lat=0&units=imperial%2C%20metric";
-  //     const res = await fetch(weather, {
-  //         "method": "GET",
-  //         "headers": {
-  //             "x-rapidapi-key": "46b4d5dd96msh6977294d33915f4p138385jsnf07fb8cefc41",
-  //             "x-rapidapi-host": "community-open-weather-map.p.rapidapi.com"
-  //         }
-  //     });
-  //
-  // }
-  
-  // fetchWeather(30002);
-  
   async function fetchWeather(location) {
     let url = `https://community-open-weather-map.p.rapidapi.com/weather?q=${location}&lang=en&units=imperial`;
     const res = await fetch(url, {
